@@ -1,5 +1,6 @@
 package com.example.mvvmsample.notes.viewmodel;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.lifecycle.LiveData;
@@ -25,6 +26,8 @@ public class MainViewModel extends ViewModel{
 
     public void buttonclicked()
     {
-      getUsers();
+        Log.d("koushik","buttonclicked");
+        users.postValue(getUsers().getValue());
+     // getUsers();
     }
 }
